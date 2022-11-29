@@ -42,3 +42,20 @@ http://localhost:3000//api/v2/seed
 * Nest
 
 
+
+# Production Build
+
+1. Crear el archivo ```.env.prod```
+2. Llenar las variables de entorno para producción
+3. Construir o crear la nueva imagen.
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+
+* En caso de que quieras utilizar tu imagen luego de crearla
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up 
+```
+
+
